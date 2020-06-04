@@ -4,6 +4,11 @@ require 'pry'
 
 class Song
 
+  self.column_names.each do |col_name|
+  attr_accessor col_name.to_sym
+  binding.pry 
+end
+
 
   def self.table_name
   #  binding.pry
