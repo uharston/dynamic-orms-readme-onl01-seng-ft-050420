@@ -5,10 +5,10 @@ require 'pry'
 class Song
 
 
-  # def self.table_name
-  # #  binding.pry
-  #   self.to_s.downcase.pluralize
-  # end
+  def self.table_name
+  #  binding.pry
+    self.to_s.downcase.pluralize
+  end
 
   def self.column_names
     DB[:conn].results_as_hash = true
