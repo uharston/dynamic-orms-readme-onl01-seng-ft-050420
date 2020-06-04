@@ -4,12 +4,6 @@ require 'pry'
 
 class Song
 
-  self.column_names.each do |col_name|
-  attr_accessor col_name.to_sym
-  binding.pry
-end
-
-
   def self.table_name
   #  binding.pry
     self.to_s.downcase.pluralize
@@ -56,6 +50,7 @@ end
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
     values.join(", ")
+    binding.pry 
   end
 
   def col_names_for_insert
